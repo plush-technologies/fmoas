@@ -1,7 +1,671 @@
-<html>
-    <h1>TEST PAGE</h1>
-
-    <form method="POST" action="">
-        {% csrf_token %}
-    </form>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facilities Management as a Service</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <!-- <script defer src="script.js"></script> -->
+</head>
+<body>
+    <div class="wrapper">
+        <div class="title">
+            <h1 class="admin-welcome">Welcome Admin!</h1>
+        </div>
+        <div class="index-body">
+            <section class="task-section">
+                <h3 class="task-title">Tasks</h3>
+                <div class="task-subtitles">
+                    <div class="individual-task-bar subtitle-bar">
+                        <div class="attribute logo">
+                            Logo
+                        </div>
+                        <div class="attribute component">
+                            <p class="component-text">Facility</p>
+                        </div>
+                        <div class="attribute location">
+                            <p class="component-text">Location</p>
+                        </div>
+                        <div class="attribute date">
+                            <p class="component-text">Date</p>
+                        </div>
+                        <div class="attribute Description">
+                            <p class="component-text">Report</p>
+                        </div>
+                        <div class="attribute name">
+                            <p class="component-text">Assignee</p>
+                        </div>
+                            <div class="modal" id="myModal">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title">Fix Broken Toilet</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="staff-assigned">
+                                                <h6>Staff Assigned</h6>
+                                                <p>Mr. Xiao</p>
+                                            </div>
+                                            <div class="location">
+                                                <h6>Location</h6>
+                                                <p>Building A53, Room 103</p>
+                                            </div>
+                                            <div class="due-date">
+                                                <h6>Due Date</h6>
+                                                <p>2023/07/06</p>
+                                            </div>
+                                            <div class="report-count">
+                                                <h6>Reports</h6>
+                                                <p>4</p>
+                                            </div>
+                                            <div class="notes">
+                                                <h6>Notes</h6>
+                                                <p>Toilet fully broken, flush not working and clogged up fully with faeces. Please also fix the door, lock is not implemented correctly.</p>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <p>Created 2023/07/04</p>
+                                        </div>
+                                    </div>
+                                </div>
+                             </div>
+                    </div>
+                </div>
+                <div class="task-summary">
+                    <div class="individual-task-bar">
+                        <img class="attribute logo" src="images/toilet.png" alt="">
+                        <div class="attribute component">
+                            <p class="component-text">Soap</p>
+                        </div>
+                        <div class="attribute location">
+                            <p class="component-text">bldg 17</p>
+                        </div>
+                        <div class="attribute date">
+                            <p class="component-text">2023/07/06</p>
+                        </div>
+                        <div class="attribute Description">
+                            <p class="component-text">Self-report</p>
+                        </div>
+                        <div class="attribute name">
+                            <p class="component-text">Mr. Xiao</p>
+                        </div>
+                        <button type="button" class="btn btn-outline-info btn-sm" data-bs-toggle="modal" data-bs-target="#myModal">
+                            <img class="arrow-image" src="images/arrow without line curve.png" alt=""> 
+                        </button>
+                            <div class="modal" id="myModal">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title">Fix Broken Toilet</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="staff-assigned">
+                                                <h6>Staff Assigned</h6>
+                                                <p>Mr. Xiao</p>
+                                            </div>
+                                            <div class="location">
+                                                <h6>Location</h6>
+                                                <p>Building A53, Room 103</p>
+                                            </div>
+                                            <div class="due-date">
+                                                <h6>Due Date</h6>
+                                                <p>2023/07/06</p>
+                                            </div>
+                                            <div class="report-count">
+                                                <h6>Reports</h6>
+                                                <p>4</p>
+                                            </div>
+                                            <div class="notes">
+                                                <h6>Notes</h6>
+                                                <p>Toilet fully broken, flush not working and clogged up fully with faeces. Please also fix the door, lock is not implemented correctly.</p>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <p>Created 2023/07/04</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                    <div class="individual-task-bar">
+                        <img class="attribute logo" src="images/toilet.png" alt="">
+                        <div class="attribute component">
+                            <p class="component-text">Soap</p>
+                        </div>
+                        <div class="attribute location">
+                            <p class="component-text">bldg SOVO</p>
+                        </div>
+                        <div class="attribute date">
+                            <p class="component-text">2023/07/06</p>
+                        </div>
+                        <div class="attribute Description">
+                            <p class="component-text">Self-report</p>
+                        </div>
+                        <div class="attribute name">
+                            <p class="component-text">Mr. Xiao</p>
+                        </div>
+                        <button type="button" class="btn btn-outline-info btn-sm" data-bs-toggle="modal" data-bs-target="#myModal">
+                            <img class="arrow-image" src="images/arrow without line curve.png" alt=""> 
+                        </button>
+                            <div class="modal" id="myModal">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title">Fix Broken Toilet</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="staff-assigned">
+                                                <h6>Staff Assigned</h6>
+                                                <p>Mr. Xiao</p>
+                                            </div>
+                                            <div class="location">
+                                                <h6>Location</h6>
+                                                <p>Building A53, Room 103</p>
+                                            </div>
+                                            <div class="due-date">
+                                                <h6>Due Date</h6>
+                                                <p>2023/07/06</p>
+                                            </div>
+                                            <div class="report-count">
+                                                <h6>Reports</h6>
+                                                <p>4</p>
+                                            </div>
+                                            <div class="notes">
+                                                <h6>Notes</h6>
+                                                <p>Toilet fully broken, flush not working and clogged up fully with faeces. Please also fix the door, lock is not implemented correctly.</p>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <p>Created 2023/07/04</p>
+                                        </div>
+                                    </div>
+                                </div>
+                             </div>
+                    </div>
+                    <div class="individual-task-bar">
+                        <img class="attribute logo" src="images/toilet.png" alt="">
+                        <div class="attribute component">
+                            <p class="component-text">Soap</p>
+                        </div>
+                        <div class="attribute location">
+                            <p class="component-text">bldg 17</p>
+                        </div>
+                        <div class="attribute date">
+                            <p class="component-text">2023/07/06</p>
+                        </div>
+                        <div class="attribute Description">
+                            <p class="component-text">Self-report</p>
+                        </div>
+                        <div class="attribute name">
+                            <p class="component-text">Mr. Xiao</p>
+                        </div>
+                        <button type="button" class="btn btn-outline-info btn-sm" data-bs-toggle="modal" data-bs-target="#myModal">
+                            <img class="arrow-image" src="images/arrow without line curve.png" alt=""> 
+                        </button>
+                            <div class="modal" id="myModal">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title">Fix Broken Toilet</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="staff-assigned">
+                                                <h6>Staff Assigned</h6>
+                                                <p>Mr. Xiao</p>
+                                            </div>
+                                            <div class="location">
+                                                <h6>Location</h6>
+                                                <p>Building A53, Room 103</p>
+                                            </div>
+                                            <div class="due-date">
+                                                <h6>Due Date</h6>
+                                                <p>2023/07/06</p>
+                                            </div>
+                                            <div class="report-count">
+                                                <h6>Reports</h6>
+                                                <p>4</p>
+                                            </div>
+                                            <div class="notes">
+                                                <h6>Notes</h6>
+                                                <p>Toilet fully broken, flush not working and clogged up fully with faeces. Please also fix the door, lock is not implemented correctly.</p>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <p>Created 2023/07/04</p>
+                                        </div>
+                                    </div>
+                                </div>
+                             </div>
+                    </div>
+                    <div class="individual-task-bar">
+                        <img class="attribute logo" src="images/toilet.png" alt="">
+                        <div class="attribute component">
+                            <p class="component-text">Soap</p>
+                        </div>
+                        <div class="attribute location">
+                            <p class="component-text">bldg 17</p>
+                        </div>
+                        <div class="attribute date">
+                            <p class="component-text">2023/07/06</p>
+                        </div>
+                        <div class="attribute Description">
+                            <p class="component-text">Self-report</p>
+                        </div>
+                        <div class="attribute name">
+                            <p class="component-text">Mr. Xiao</p>
+                        </div>
+                        <button type="button" class="btn btn-outline-info btn-sm" data-bs-toggle="modal" data-bs-target="#myModal">
+                            <img class="arrow-image" src="images/arrow without line curve.png" alt=""> 
+                        </button>
+                            <div class="modal" id="myModal">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title">Fix Broken Toilet</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="staff-assigned">
+                                                <h6>Staff Assigned</h6>
+                                                <p>Mr. Xiao</p>
+                                            </div>
+                                            <div class="location">
+                                                <h6>Location</h6>
+                                                <p>Building A53, Room 103</p>
+                                            </div>
+                                            <div class="due-date">
+                                                <h6>Due Date</h6>
+                                                <p>2023/07/06</p>
+                                            </div>
+                                            <div class="report-count">
+                                                <h6>Reports</h6>
+                                                <p>4</p>
+                                            </div>
+                                            <div class="notes">
+                                                <h6>Notes</h6>
+                                                <p>Toilet fully broken, flush not working and clogged up fully with faeces. Please also fix the door, lock is not implemented correctly.</p>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <p>Created 2023/07/04</p>
+                                        </div>
+                                    </div>
+                                </div>
+                             </div>
+                    </div>
+                    <div class="individual-task-bar">
+                        <img class="attribute logo" src="images/toilet.png" alt="">
+                        <div class="attribute component">
+                            <p class="component-text">Soap</p>
+                        </div>
+                        <div class="attribute location">
+                            <p class="component-text">bldg 17</p>
+                        </div>
+                        <div class="attribute date">
+                            <p class="component-text">2023/07/06</p>
+                        </div>
+                        <div class="attribute Description">
+                            <p class="component-text">Self-report</p>
+                        </div>
+                        <div class="attribute name">
+                            <p class="component-text">Mr. Xiao</p>
+                        </div>
+                        <button type="button" class="btn btn-outline-info btn-sm" data-bs-toggle="modal" data-bs-target="#myModal">
+                            <img class="arrow-image" src="images/arrow without line curve.png" alt=""> 
+                        </button>
+                            <div class="modal" id="myModal">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title">Fix Broken Toilet</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="staff-assigned">
+                                                <h6>Staff Assigned</h6>
+                                                <p>Mr. Xiao</p>
+                                            </div>
+                                            <div class="location">
+                                                <h6>Location</h6>
+                                                <p>Building A53, Room 103</p>
+                                            </div>
+                                            <div class="due-date">
+                                                <h6>Due Date</h6>
+                                                <p>2023/07/06</p>
+                                            </div>
+                                            <div class="report-count">
+                                                <h6>Reports</h6>
+                                                <p>4</p>
+                                            </div>
+                                            <div class="notes">
+                                                <h6>Notes</h6>
+                                                <p>Toilet fully broken, flush not working and clogged up fully with faeces. Please also fix the door, lock is not implemented correctly.</p>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <p>Created 2023/07/04</p>
+                                        </div>
+                                    </div>
+                                </div>
+                             </div>
+                    </div>
+                    <div class="individual-task-bar">
+                        <img class="attribute logo" src="images/toilet.png" alt="">
+                        <div class="attribute component">
+                            <p class="component-text">Soap</p>
+                        </div>
+                        <div class="attribute location">
+                            <p class="component-text">bldg 17</p>
+                        </div>
+                        <div class="attribute date">
+                            <p class="component-text">2023/07/06</p>
+                        </div>
+                        <div class="attribute Description">
+                            <p class="component-text">Self-report</p>
+                        </div>
+                        <div class="attribute name">
+                            <p class="component-text">Mr. Xiao</p>
+                        </div>
+                        <button type="button" class="btn btn-outline-info btn-sm" data-bs-toggle="modal" data-bs-target="#myModal">
+                            <img class="arrow-image" src="images/arrow without line curve.png" alt=""> 
+                        </button>
+                            <div class="modal" id="myModal">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title">Fix Broken Toilet</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="staff-assigned">
+                                                <h6>Staff Assigned</h6>
+                                                <p>Mr. Xiao</p>
+                                            </div>
+                                            <div class="location">
+                                                <h6>Location</h6>
+                                                <p>Building A53, Room 103</p>
+                                            </div>
+                                            <div class="due-date">
+                                                <h6>Due Date</h6>
+                                                <p>2023/07/06</p>
+                                            </div>
+                                            <div class="report-count">
+                                                <h6>Reports</h6>
+                                                <p>4</p>
+                                            </div>
+                                            <div class="notes">
+                                                <h6>Notes</h6>
+                                                <p>Toilet fully broken, flush not working and clogged up fully with faeces. Please also fix the door, lock is not implemented correctly.</p>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <p>Created 2023/07/04</p>
+                                        </div>
+                                    </div>
+                                </div>
+                             </div>
+                    </div>
+                    <div class="individual-task-bar">
+                        <img class="attribute logo" src="images/toilet.png" alt="">
+                        <div class="attribute component">
+                            <p class="component-text">Soap</p>
+                        </div>
+                        <div class="attribute location">
+                            <p class="component-text">bldg 17</p>
+                        </div>
+                        <div class="attribute date">
+                            <p class="component-text">2023/07/06</p>
+                        </div>
+                        <div class="attribute Description">
+                            <p class="component-text">Self-report</p>
+                        </div>
+                        <div class="attribute name">
+                            <p class="component-text">Mr. Xiao</p>
+                        </div>
+                        <button type="button" class="btn btn-outline-info btn-sm" data-bs-toggle="modal" data-bs-target="#myModal">
+                            <img class="arrow-image" src="images/arrow without line curve.png" alt=""> 
+                        </button>
+                            <div class="modal" id="myModal">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title">Fix Broken Toilet</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="staff-assigned">
+                                                <h6>Staff Assigned</h6>
+                                                <p>Mr. Xiao</p>
+                                            </div>
+                                            <div class="location">
+                                                <h6>Location</h6>
+                                                <p>Building A53, Room 103</p>
+                                            </div>
+                                            <div class="due-date">
+                                                <h6>Due Date</h6>
+                                                <p>2023/07/06</p>
+                                            </div>
+                                            <div class="report-count">
+                                                <h6>Reports</h6>
+                                                <p>4</p>
+                                            </div>
+                                            <div class="notes">
+                                                <h6>Notes</h6>
+                                                <p>Toilet fully broken, flush not working and clogged up fully with faeces. Please also fix the door, lock is not implemented correctly.</p>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <p>Created 2023/07/04</p>
+                                        </div>
+                                    </div>
+                                </div>
+                             </div>
+                    </div>
+                    <div class="individual-task-bar">
+                        <img class="attribute logo" src="images/toilet.png" alt="">
+                        <div class="attribute component">
+                            <p class="component-text">Soap</p>
+                        </div>
+                        <div class="attribute location">
+                            <p class="component-text">bldg 17</p>
+                        </div>
+                        <div class="attribute date">
+                            <p class="component-text">2023/07/06</p>
+                        </div>
+                        <div class="attribute Description">
+                            <p class="component-text">Self-report</p>
+                        </div>
+                        <div class="attribute name">
+                            <p class="component-text">Mr. Xiao</p>
+                        </div>
+                        <button type="button" class="btn btn-outline-info btn-sm" data-bs-toggle="modal" data-bs-target="#myModal">
+                            <img class="arrow-image" src="images/arrow without line curve.png" alt=""> 
+                        </button>
+                            <div class="modal" id="myModal">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title">Fix Broken Toilet</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="staff-assigned">
+                                                <h6>Staff Assigned</h6>
+                                                <p>Mr. Xiao</p>
+                                            </div>
+                                            <div class="location">
+                                                <h6>Location</h6>
+                                                <p>Building A53, Room 103</p>
+                                            </div>
+                                            <div class="due-date">
+                                                <h6>Due Date</h6>
+                                                <p>2023/07/06</p>
+                                            </div>
+                                            <div class="report-count">
+                                                <h6>Reports</h6>
+                                                <p>4</p>
+                                            </div>
+                                            <div class="notes">
+                                                <h6>Notes</h6>
+                                                <p>Toilet fully broken, flush not working and clogged up fully with faeces. Please also fix the door, lock is not implemented correctly.</p>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <p>Created 2023/07/04</p>
+                                        </div>
+                                    </div>
+                                </div>
+                             </div>
+                    </div>
+                </div>
+            </section>
+            <div class="bottom-row">
+                <div class="stock-section">
+                    <h2>Stock Status</h2>
+                    <div class="stock-subtitles">
+                        <div class="individual-stock stock-subtitle">
+                            <div class="stock-attribute item-name">
+                                <p class="stock-text">Item</p>
+                            </div>
+                            <div class="stock-attribute item-availability">
+                                <p class="stock-text">Amount</p>
+                            </div>
+                            <div class="stock-attribute">
+                                <p class="stock-text">Status</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="stock-status">
+                        <div class="stock-list">
+                            <div class="individual-stock">
+                                <div class="stock-attribute item-name">
+                                    <p>Soap</p>
+                                </div>
+                                <div class="stock-attribute item-availability">
+                                    <p>500L</p>
+                                </div>
+                                <div class="stock-attribute">
+                                    <p class="item-status">High</p>
+                                </div>
+                            </div>
+                            <div class="individual-stock">
+                                <div class="stock-attribute item-name">
+                                    <p>Tissues</p>
+                                </div>
+                                <div class="stock-attribute item-availability">
+                                    <p>26 Packs</p>
+                                </div>
+                                <div class="stock-attribute">
+                                    <p class="item-status">Medium</p>
+                                </div>
+                            </div>
+                            <div class="individual-stock">
+                                <div class="stock-attribute item-name">
+                                    <p>Light Bulbs</p>
+                                </div>
+                                <div class="stock-attribute item-availability">
+                                    <p>50 Bulbs</p>
+                                </div>
+                                <div class="stock-attribute">
+                                    <p class="item-status">Medium</p>
+                                </div>
+                            </div>
+                            <div class="individual-stock">
+                                <div class="stock-attribute item-name">
+                                    <p>Water Jugs</p>
+                                </div>
+                                <div class="stock-attribute item-availability">
+                                    <p>10 Jugs</p>
+                                </div>
+                                <div class="stock-attribute">
+                                    <p class="item-status">Low</p>
+                                </div>
+                            </div>
+                            <div class="individual-stock">
+                                <div class="stock-attribute item-name">
+                                    <p>Water Jugs</p>
+                                </div>
+                                <div class="stock-attribute item-availability">
+                                    <p>10 Jugs</p>
+                                </div>
+                                <div class="stock-attribute">
+                                    <p class="item-status">Low</p>
+                                </div>
+                            </div>
+                            <div class="individual-stock">
+                                <div class="stock-attribute item-name">
+                                    <p>Water Jugs</p>
+                                </div>
+                                <div class="stock-attribute item-availability">
+                                    <p>10 Jugs</p>
+                                </div>
+                                <div class="stock-attribute">
+                                    <p class="item-status">Low</p>
+                                </div>
+                            </div>
+                            <div class="individual-stock">
+                                <div class="stock-attribute item-name">
+                                    <p>Water Jugs</p>
+                                </div>
+                                <div class="stock-attribute item-availability">
+                                    <p>10 Jugs</p>
+                                </div>
+                                <div class="stock-attribute">
+                                    <p class="item-status">Low</p>
+                                </div>
+                            </div>
+                            <div class="individual-stock">
+                                <div class="stock-attribute item-name">
+                                    <p>Water Jugs</p>
+                                </div>
+                                <div class="stock-attribute item-availability">
+                                    <p>10 Jugs</p>
+                                </div>
+                                <div class="stock-attribute">
+                                    <p class="item-status">Low</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="analytics-section">
+                    <h2>Analytics Summary</h3>
+                        <div class="individual-stock stock-subtitle">
+                            <div class="stock-attribute item-name">
+                                <p class="stock-text">Item</p>
+                            </div>
+                            <div class="stock-attribute item-availability">
+                                <p class="stock-text">Amount</p>
+                            </div>
+                            <div class="stock-attribute">
+                                <p class="stock-text">Status</p>
+                            </div>
+                        </div>
+                        <div class="analytics-summary-container">
+                            <div class="analytics-list">
+                                <div class="analytic-element highest-room-usage">
+                                    <h3 class="analytic-placeholder">Room Usage</h3>
+                                </div>
+                                <div class="analytic-element average-ticket-speed">
+                                    <h3 class="analytic-placeholder">Average Speed</h3>
+                                </div>                        
+                                <div class="analytic-element highest-room-usage">
+                                    <h3 class="analytic-placeholder">Room Usage</h3>
+                                </div>
+                                <div class="analytic-element average-ticket-speed">
+                                    <h3 class="analytic-placeholder">Average Speed</h3>
+                                </div>                        
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</body>
 </html>
